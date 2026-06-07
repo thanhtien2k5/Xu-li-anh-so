@@ -1,0 +1,49 @@
+# ============================================================
+# requirements.txt
+# Hệ thống Định danh Khuôn mặt Thời gian Thực
+# Trường Đại học Quy Nhơn - Khoa CNTT
+# ============================================================
+
+# --- Thư viện xử lý ảnh & tính toán ---
+opencv-python>=4.8.0          # Xử lý video/ảnh, giao diện OpenCV
+numpy>=1.24.0                 # Tính toán ma trận, vector embedding
+
+# --- InsightFace (nhận diện khuôn mặt) ---
+insightface>=0.7.3            # RetinaFace detect + buffalo_l embed
+onnxruntime>=1.16.0           # Backend chạy model ONNX (CPU)
+# onnxruntime-gpu>=1.16.0     # ← Bỏ comment nếu dùng GPU (CUDA)
+
+# --- Face alignment ---
+scikit-image>=0.21.0          # SimilarityTransform cho align_face
+
+# --- Xử lý ảnh bổ sung ---
+Pillow>=10.0.0                # Đọc/ghi ảnh (PIL)
+
+# --- Database ---
+# sqlite3 đã có sẵn trong Python standard library
+
+# --- Tiện ích ---
+tqdm>=4.65.0                  # Progress bar (dùng khi đăng ký batch)
+
+# ============================================================
+# HƯỚNG DẪN CÀI ĐẶT
+# ============================================================
+#
+# Bước 1: Tạo môi trường ảo (khuyến nghị)
+#   python -m venv venv
+#   source venv/bin/activate       (Linux/Mac)
+#   venv\Scripts\activate          (Windows)
+#
+# Bước 2: Cài thư viện
+#   pip install -r requirements.txt
+#
+# Bước 3 (chỉ dùng GPU): Cài CUDA + onnxruntime-gpu
+#   pip install onnxruntime-gpu
+#   # Bỏ comment dòng onnxruntime-gpu bên trên
+#
+# Lần đầu chạy: InsightFace sẽ tự động tải model 'buffalo_l'
+#   (~500MB) vào ~/.insightface/models/buffalo_l/
+#
+# ============================================================
+# PHIÊN BẢN PYTHON: 3.8 – 3.11 (khuyến nghị 3.10)
+# ============================================================

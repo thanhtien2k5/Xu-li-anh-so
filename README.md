@@ -293,4 +293,4 @@ records = db.get_attendance_by_date("2024-01-15")
 
 ---
 
-*Phát triển trong khuôn khổ Khóa luận Tốt nghiệp – Trường Đại học Quy Nhơn – 2024*
+* Trường Đại học Quy Nhơn – 2026*
